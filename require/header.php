@@ -256,10 +256,6 @@ if(isset($_SESSION['active'])){
                     </a>
                 </div>
             </li>
-
-            <li class="text-white">
-                <?= $url ?>
-            </li>
         </ul>
     </nav>
 </div>
