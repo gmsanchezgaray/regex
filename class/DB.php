@@ -4,9 +4,17 @@
 class DB
 {
     static private $db;
-    private const DSN = 'mysql:host=127.0.0.1;dbname=regex_db';
-    private const USER = 'root';
-    private const PASSWORD = '';
+/*                      Development Connection                                   */
+
+//    private const DSN = 'mysql:host=127.0.0.1;dbname=regex_db';
+//    private const USER = 'root';
+//    private const PASSWORD = '';
+
+/*                      Remote Database Connection                                   */
+
+    private const DSN = 'mysql:host=remotemysql.com;dbname=MKuk45qCFx';
+    private const USER = 'MKuk45qCFx';
+    private const PASSWORD = 'JnvK41b1Iq';
     private const CHARSET = 'utf8';
     /**
      * @return PDO
