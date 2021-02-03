@@ -2,12 +2,14 @@
 session_start();
 
 $url= $_SERVER["REQUEST_URI"];
+$url_path = basename(parse_url($url, PHP_URL_PATH));
+
 
 $searchBar = '';
 $textoBusqueda = isset($_GET['search']) ? $_GET['search'] : '';
 
 
-if($url == '/curso-php/regex/index.php' || $url == '/curso-php/regex/index.php?search='.strtolower($textoBusqueda)) {
+if($url_path == 'index.php' || $url_path == 'index.php?search='.strtolower($textoBusqueda)) {
     $searchBar = <<<SBAR
         <div class="col-md-6">
             <form action="" method="" class="input-group row m-0" autocomplete="off">
