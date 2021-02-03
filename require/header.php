@@ -8,7 +8,7 @@ $searchBar = '';
 $textoBusqueda = isset($_GET['search']) ? $_GET['search'] : '';
 
 
-if($url_path == 'index.php' || $url_path == 'index.php?search='.strtolower($textoBusqueda) || $url == '/') {
+if($url_path == 'index.php' || $url_path == 'index.php?search='.$textoBusqueda || $url == '/' || $url = '/?search='.$textoBusqueda) {
     $searchBar = <<<SBAR
         <div class="col-md-6">
             <form action="" method="" class="input-group row m-0" autocomplete="off">
@@ -62,9 +62,6 @@ if($url_path == 'index.php' || $url_path == 'index.php?search='.strtolower($text
 
     <div class="collapse navbar-collapse flex-grow-0 col-md-4 justify-content-end" id="navbarsExampleDefault">
         <ul class="navbar-nav text-center ">
-            <li class="text-white">
-                <?=  $url ?>
-            </li>
             <li class="nav-item mx-1">
                 <a class="nav-link" href="./index.php">Inicio <span class="sr-only">(current)</span></a>
             </li>
