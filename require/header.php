@@ -8,7 +8,7 @@ $searchBar = '';
 $textoBusqueda = isset($_GET['search']) ? $_GET['search'] : '';
 
 
-if($url_path == 'index.php' || $url_path == 'index.php?search='.strtolower($textoBusqueda) || $url == 'regex-php.herokuapp.com') {
+if($url_path == 'index.php' || $url_path == 'index.php?search='.strtolower($textoBusqueda) || $url == '/') {
     $searchBar = <<<SBAR
         <div class="col-md-6">
             <form action="" method="" class="input-group row m-0" autocomplete="off">
